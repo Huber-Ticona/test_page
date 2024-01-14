@@ -1,0 +1,221 @@
+.titulo{
+    color: red;
+}
+.slider-container{
+    padding:20px 0 ;
+    height: fit-content; 
+    border: 1px solid red;
+}
+.slider-head{
+font-family:Arial, Helvetica, sans-serif;
+font-size: 15px;
+}
+.min-max-price{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(249, 154, 11);
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+.slider-styled,
+.slider-styled .noUi-handle {
+    box-shadow: none;
+}
+/* Hide markers on slider handles */
+.slider-styled .noUi-handle::before,
+.slider-styled .noUi-handle::after {
+    display: none;
+}
+.slider-styled .noUi-handle .noUi-touch-area {
+    border: 1px solid transparent;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    width: auto;
+    height: auto;
+}
+/* Show a border when hovering the area the handle responds to */
+.slider-styled .noUi-handle:hover .noUi-touch-area {
+    border: 1px dashed red;
+}
+/* Custom slider aparence */
+#slider{
+    height: 10px;
+}
+#slider .noUi-connect {
+    background:  rgb(249, 154, 11);
+}
+#slider .noUi-handle {
+    height: 30px;
+    width: 30px;
+    top: -10px;
+    right: -15px; /* half the width */
+    border-radius: 50%;
+}
+.input-slider-range{
+  height: 10px;
+}
+.input-slider-range .noUi-connect {
+  background:  rgb(249, 154, 11);
+}
+.input-slider-range .noUi-handle {
+  height: 30px;
+  width: 30px;
+  top: -10px;
+  right: -15px; /* half the width */
+  border-radius: 50%;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .search-box {
+    width: 450px;
+    height: 100px;
+    position: relative;
+  }
+  
+  .input {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    box-sizing: border-box;
+    width: 0px;
+    height: 63px;
+    padding: 0 20px;
+    outline: none;
+    font-size: 18px;
+    border-radius: 50px;
+    color: #29313a;
+    border: 3px solid #62d474;
+    transition: all 0.8s ease;
+  }
+  
+  ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #62d474;
+  }
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #62d474;
+  }
+  :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #62d474;
+  }
+  :-moz-placeholder {
+    /* Firefox 18- */
+    color: #62d474;
+  }
+  
+  .btn {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #62d474;
+    border-radius: 50%;
+    right: 45px;
+    top: 10px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 80px;
+    font-size: 20px;
+    color: #fff;
+    transition: all 0.8s ease;
+  }
+  
+  .input.active {
+    width: 350px;
+    right: 100px;
+  }
+  
+  .btn.animate {
+    transform: rotate(-360deg);
+    right: 100px;
+  }
+
+ 
+
+  .contenedor_filtro{
+    border: 1px solid red;
+    width: 300px;
+    height: 600px;
+    padding: 10px 10px;
+  } 
+  .filtros_activos{
+    display: flex;
+    width: auto;
+    height: auto;
+    border:1px solid red;
+    
+    margin-bottom: 10px;
+  }
+  .filtros_activos p{
+    padding: 3px 3px;
+    margin: 3px 3px;
+    border-radius: 40%;
+    border:1px solid blue;
+  }
+  .filtro{
+    border: 1px solid aqua;
+    border-top: 2px solid black;
+    height: 50px;
+    display: flex;
+  }
+
+  .icon {
+    margin-right: 10px;
+  }
+  
+  .content {
+    display: none;
+  }
+  
+  
+  /* test */
+  form {
+    accent-color: lime;
+    padding: 1.5rem;
+    background-color: rgba(245, 245, 245);
+    border-radius: 0.5rem;
+  }
+  input[type="checkbox"],
+input[type="radio"]{
+	width: 1.5em;
+	height: 1.5em;
+	margin-right: 0.65rem;
+}
+
+.plan__container{
+  --_border: var(--border , 1px solid blue);
+  --_icon: var(--icon , red);
+
+  border: 1px solid red;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+}
+.plan__container i{
+  color: var(--_icon);
+}
+.plan__item{
+  width: 100px;
+  height: 200px;
+  border: 1px solid blue;
+}
+.container{
+  --_test: var(--test, purple);
+}
+.test-2{
+  width: 100px;
+  border: 1px solid var(--_icon);
+}
