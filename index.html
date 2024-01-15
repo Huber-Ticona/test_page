@@ -69,6 +69,54 @@
         </div>
          <div class="slider-styled" id="slider"></div> 
     </div> -->
+  
+    <!-- LOAD CSV DATA -->
+    <table id="tabla-personas" border="1">
+      <thead>
+          <tr>
+              <th>Nombre</th>
+              <th>Edad</th>
+              <th>Género</th>
+              <th>Fecha de Nacimiento</th>
+          </tr>
+      </thead>
+      <tbody>
+          <!-- Los datos del CSV se mostrarán aquí -->
+      </tbody>
+  </table>
+
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          cargarDatosCSV();
+      });
+
+      async function cargarDatosCSV() {
+          try {
+              const response = await fetch('data/person.csv');
+              const data = await response.text();
+              const filas = data.split('\n');
+
+              // Ignorar la primera fila si es un encabezado
+              const encabezado = filas[0].split(';');
+              const datos = filas.slice(1).map(fila => fila.split(';'));
+
+              const tabla = document.getElementById('tabla-personas');
+              const tbody = tabla.querySelector('tbody');
+
+              datos.forEach(fila => {
+                  const tr = document.createElement('tr');
+                  fila.forEach((dato, index) => {
+                      const td = document.createElement('td');
+                      td.textContent = dato;
+                      tr.appendChild(td);
+                  });
+                  tbody.appendChild(tr);
+              });
+          } catch (error) {
+              console.error('Error al cargar los datos:', error);
+          }
+      }
+  </script>
 
 <!-- new test -->
 <div class="slider-container ">
